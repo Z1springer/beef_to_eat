@@ -3,7 +3,7 @@ const connection = require("../config/connection.js");
 function printMarksOfQuestion(num) {
   let arr = [];
 
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < num; i++) {
     arr.push("?");
   }
 
@@ -25,7 +25,7 @@ function sqlObj(ob) {
   return arr.toString();
 }
 
-const orm = {
+var orm = {
   all: function (tableInput, cb) {
     const queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function (err, res) {
@@ -55,9 +55,8 @@ const orm = {
       cb(res);
     });
   },
-};
 
-update: function(table, objColVals, condition, cb){
+  update: function (table, objColVals, condition, cb) {
     const queryString = "UPDATE " + table;
 
     queryString += " SET ";
@@ -66,12 +65,13 @@ update: function(table, objColVals, condition, cb){
     queryString += condition;
 
     console.log(queryString);
-    connection.query(queryString,function(err, res){
-        if(err){
-            throw err;
-        }
-        cb(res);
+    connection.query(queryString, function (err, res) {
+      if (err) {
+        throw err;
+      }
+      cb(res);
     });
-}
+  },
+};
 
 module.export = orm;

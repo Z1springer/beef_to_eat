@@ -48,20 +48,20 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 #### App Setup
 
-1. Create a GitHub repo called `burger` and clone it to your computer.
+<!-- 1. Create a GitHub repo called `burger` and clone it to your computer. -->
 
-2. Make a package.json file by running `npm init` from the command line.
+<!-- 2. Make a package.json file by running `npm init` from the command line. -->
 
-3. Install the Express npm package: `npm install express`.
+<!-- 3. Install the Express npm package: `npm install express`. -->
 
-4. Create a server.js file.
+<!-- 4. Create a server.js file. -->
 
-5. Install the Handlebars npm package: `npm install express-handlebars`.
+<!-- 5. Install the Handlebars npm package: `npm install express-handlebars`. -->
 
-6. Install MySQL npm package: `npm install mysql`.
+<!-- 6. Install MySQL npm package: `npm install mysql`. -->
 
-7. Require the following npm packages inside of the server.js file:
-   - express
+<!-- 7. Require the following npm packages inside of the server.js file:
+   - express -->
 
 #### DB Setup
 
@@ -80,64 +80,64 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 <!-- 4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line -->
 
-5. Now you're going to run these SQL files.
+<!-- 5. Now you're going to run these SQL files. -->
 
-   - Make sure you're in the `db` folder of your app.
+   <!-- - Make sure you're in the `db` folder of your app. -->
 
-   - Start MySQL command line tool and login: `mysql -u root -p`.
+   <!-- - Start MySQL command line tool and login: `mysql -u root -p`. -->
 
-   - With the `mysql>` command line tool running, enter the command `source schema.sql`. This will run your schema file and all of the queries in it -- in other words, you'll be creating your database.
+   <!-- - With the `mysql>` command line tool running, enter the command `source schema.sql`. This will run your schema file and all of the queries in it -- in other words, you'll be creating your database. -->
 
-   - Now insert the entries you defined in `seeds.sql` by running the file: `source seeds.sql`.
+   <!-- - Now insert the entries you defined in `seeds.sql` by running the file: `source seeds.sql`. -->
 
-   - Close out of the MySQL command line tool: `exit`.
+   <!-- - Close out of the MySQL command line tool: `exit`. -->
 
 #### Config Setup
 
-1. Inside your `burger` directory, create a folder named `config`.
+<!-- 1. Inside your `burger` directory, create a folder named `config`. -->
 
-2. Create a `connection.js` file inside `config` directory.
+<!-- 2. Create a `connection.js` file inside `config` directory. -->
 
-   - Inside the `connection.js` file, setup the code to connect Node to MySQL.
+   <!-- - Inside the `connection.js` file, setup the code to connect Node to MySQL. -->
 
-   - Export the connection.
+   <!-- - Export the connection. -->
 
-3. Create an `orm.js` file inside `config` directory.
+<!-- 3. Create an `orm.js` file inside `config` directory. -->
 
-   - Import (require) `connection.js` into `orm.js`
+   <!-- - Import (require) `connection.js` into `orm.js` -->
 
-   - In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
+- In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
 
-     - `selectAll()`
-     - `insertOne()`
-     - `updateOne()`
+  <!-- - `selectAll()` -->
+  <!-- - `insertOne()` -->
+  <!-- - `updateOne()` -->
 
-   - Export the ORM object in `module.exports`.
+<!-- - Export the ORM object in `module.exports`. -->
 
 #### Model setup
 
-- Inside your `burger` directory, create a folder named `models`.
+<!-- - Inside your `burger` directory, create a folder named `models`. -->
 
-  - In `models`, make a `burger.js` file.
+  <!-- - In `models`, make a `burger.js` file. -->
 
-    - Inside `burger.js`, import `orm.js` into `burger.js`
+    <!-- - Inside `burger.js`, import `orm.js` into `burger.js` -->
 
-    - Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
+    <!-- - Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM. -->
 
-    - Export at the end of the `burger.js` file.
+    <!-- - Export at the end of the `burger.js` file. -->
 
 #### Controller setup
 
-1. Inside your `burger` directory, create a folder named `controllers`.
+<!-- 1. Inside your `burger` directory, create a folder named `controllers`. -->
 
-2. In `controllers`, create the `burgers_controller.js` file.
+<!-- 2. In `controllers`, create the `burgers_controller.js` file. -->
 
-3. Inside the `burgers_controller.js` file, import the following:
+<!-- 3. Inside the `burgers_controller.js` file, import the following:
 
    - Express
-   - `burger.js`
+   - `burger.js` -->
 
-4. Create the `router` for the app, and export the `router` at the end of your file.
+<!-- 4. Create the `router` for the app, and export the `router` at the end of your file. -->
 
 #### View setup
 
