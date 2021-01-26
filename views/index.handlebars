@@ -1,0 +1,27 @@
+<h1>BEEEEEEF</h1>
+
+<h2>Beef to be Eaten!!!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless consumed}}
+      {{> burgers/burger-block consumed=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Beef Already Eaten!!!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if consumed}}
+      {{> burgers/burger-block consumed=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Beef!</h2>
+
+<form class="create-form">
+    <label for=""></label>
+</form>
