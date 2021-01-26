@@ -23,5 +23,17 @@
 <h2>Add a Beef!</h2>
 
 <form class="create-form">
-    <label for=""></label>
+
+    <div class="form-group">
+        <label for="notHungry">Hungry? Why not try:</label>
+        <input type="text" id="notHungry" name="name">
+    </div>
+    
+    <div class="form-group">
+        <label for="Consume">Consume?</label><br>
+        <input type="radio" name="Consume" value="1" checked> Consume!<br>
+        <input type="radio" name="Consume" value="0"> Not Yet Consumed
+    </div>
+
+    <button type="submit">Consume the Meat!</button>
 </form>

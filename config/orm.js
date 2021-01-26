@@ -74,4 +74,4 @@ var orm = {
   },
 };
 
-module.export = orm;
+module.exports = orm;
