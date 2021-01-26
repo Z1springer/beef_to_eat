@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS beef_db;
+
 CREATE DATABASE beef_db;
 
 USE DATABASE beef_db;
@@ -7,4 +9,4 @@ CREATE TABLE burger (
     burger_name VARCHAR(255) NOT NULL,
     consumed BOOLEAN DEFAULT false,
     PRIMARY KEY (id),
-)
+);
