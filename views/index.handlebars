@@ -5,7 +5,7 @@
 <ul>
   {{#each burgers}}
     {{#unless consumed}}
-      {{> burgers/burger-block consumed=true}}
+      {{> beef-block consumed=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -15,14 +15,14 @@
 <ul>
   {{#each burgers}}
     {{#if consumed}}
-      {{> burgers/burger-block consumed=false}}
+      {{> beef-block consumed=false}}
     {{/if}}
   {{/each}}
 </ul>
 
 <h2>Add a Beef!</h2>
 
-<form class="create-form">
+<form class="create-form" id="eatForm">
 
     <div class="form-group">
         <label for="notHungry">Hungry? Why not try:</label>

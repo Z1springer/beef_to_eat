@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const burger = require("../models/beef.js");
+let burger = require("../models/beef.js");
 
 router.get("/", function (req, res) {
   burger.all(function (data) {
@@ -15,6 +15,7 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burgers", function (req, res) {
+  console.log("something===================================================");
   burger.create(
     ["name", "consumed"],
     [req.body.name, req.body.consumed],

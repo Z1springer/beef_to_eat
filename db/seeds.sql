@@ -1,8 +1,8 @@
 USE beef_db;
 
-INSERT INTO burger (burger_name) VALUES ('Teriyaki Burger');
-INSERT INTO burger (burger_name) VALUES ('Chicken Burger');
-INSERT INTO burger (burger_name) VALUES ('Baconater');
-INSERT INTO burger (burger_name) VALUES ('Pretzel Bun Burger');
-INSERT INTO burger (burger_name) VALUES ('Pull-Pork Sandwiche');
-INSERT INTO burger (burger_name) VALUES ('Bacon Between Bread')
+INSERT INTO burgers (name) VALUES ('Teriyaki Burger');
+INSERT INTO burgers (name) VALUES ('Chicken Burger');
+INSERT INTO burgers (name) VALUES ('Baconater');
+INSERT INTO burgers (name) VALUES ('Pretzel Bun Burger');
+INSERT INTO burgers (name) VALUES ('Pull-Pork Sandwiche');
+INSERT INTO burgers (name) VALUES ('Bacon Between Bread')
