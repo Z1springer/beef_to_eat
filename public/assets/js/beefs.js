@@ -15,14 +15,13 @@ $(function () {
       data: newBeef,
     }).then(function () {
       console.log("Created New Beef Thing");
-      // location.reload();
+      location.reload();
     });
   });
   console.log($(".eat-burger"));
   $(".eat-it").on("click", function (event) {
-    console.log("something===================================================");
     let id = $(this).data("id");
-    const eatBeef = $(this).data("eatBeef");
+    const eatBeef = $(this).data("eaten");
 
     const consumedBeef = {
       consumed: eatBeef,
@@ -33,17 +32,18 @@ $(function () {
       data: consumedBeef,
     }).then(function () {
       console.log("Eat Beef");
-      // location.reload();
+      location.reload();
     });
   });
 
   $(".delete-beef").on("click", function (event) {
+    console.log("AAAAAAAAAAAAAAHHHHHHHHHHHHHHHH");
     let id = $(this).data("id");
     $.ajax("/api/burgers/" + id, {
       type: "DELETE",
     }).then(function () {
       console.log("Beef has been removed", id);
-      // location.reload();
+      location.reload();
     });
   });
 });

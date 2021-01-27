@@ -15,7 +15,6 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burgers", function (req, res) {
-  console.log("something===================================================");
   burger.create(
     ["name", "consumed"],
     [req.body.name, req.body.consumed],
@@ -36,13 +35,25 @@ router.put("/api/burgers/:id", function (req, res) {
     },
     condition,
     function (result) {
-      if (result.changedRows == 0) {
+      if (result.changedRows === 0) {
         return res.status(404).end();
       } else {
         res.status(200).end();
       }
     }
   );
+});
+
+router.delete("/api/burgers/:id", function (req, res) {
+  let condition = "id= " + req.params.id;
+  console.log("req.params.id");
+  burger.delete(condition, function (result) {
+    if (result.changedRows === 0) {
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  });
 });
 
 module.exports = router;
